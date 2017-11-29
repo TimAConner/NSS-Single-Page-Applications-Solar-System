@@ -46,5 +46,17 @@ outputPlanets(filterPlanets(capitalize(planets), "e"), "Planets with E");
 
 var words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]; 
 function reduceArray(sentenceArray){
-       
+    let sentence = sentenceArray.join(" ");
+    sentence += ".";
+    return sentence;
 }
+
+function print(text){
+    let para = document.createElement("p");
+    let textNode = document.createTextNode(text);
+    para.appendChild(textNode);
+    el.appendChild(para);
+}
+
+
+print(reduceArray(words));
